@@ -1,0 +1,153 @@
+--- 
+layout: frontmatter 
+title: Ambient Intelligence 2015 
+active: Home
+---
+<div class="container">
+	<div class="container marketing">
+		<div class="row">
+			<div class="col-ld-12 col-md-12 col-sm-12">
+				<p>
+					The <a href="http://bit.ly/polito-ami">course</a> aims at
+					describing the field of Ambient Intelligence (AmI), outlining its
+					multi-disciplinary nature and its technology and application areas.
+					The evolution of consumer electronic technologies, of wireless
+					networks, of sensors and the ability to represent and process
+					knowledge and data on a large scale, nowadays allow the conception
+					of intelligent environments able to handle, in an optimal way,
+					energy-related variables, comfort, safety and user interaction.
+					Such scenarios spur a variety of solutions, ranging from smart
+					homes to smart buildings, from smart cities to smart transportation
+					systems. Special emphasis, on the course, will be devoted to
+					design-related aspects and on the overall hardware-software
+					architectures, besides reviewing the involved technologies. This
+					will enable the conception and realization of reusable and
+					interoperable solutions. The course will include some seminars
+					given by industry experts.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<img src="assets/img/skills.png" alt="skills">
+				<h2>Skills</h2>
+				<p>Writing system specifications and high-level design of an
+					ambient intelligence system, starting from its functional and
+					behavioral requirements. Realization of intelligent scenarios over
+					real smart environments.</p>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<img src="assets/img/knowledge.png" alt="knowledge">
+				<h2>Knowledge</h2>
+				<p>Technologies involved in the design and realization of
+					intelligent environments, at the various architectural levels
+					(sensors, domotic networks, wireless sensor networks, residential
+					gateways, stream data processing, big data analysis, user
+					interfaces). Application of user-driven design methodologies.</p>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6">
+				<img src="assets/img/engagement.png" alt="engagement">
+				<h2>Engagement</h2>
+				<p>Students are required to engage in design and implementation
+					of real-world intelligent environments. They are required to
+					team-up around project ideas individually proposed and socially
+					ranked. Teams are composed by 3 students on average, and select the
+					project to carry-on throughout the course. Final outcomes are
+					publicly reachable (see below for current projects).</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-ld-12 col-md-12 col-sm-12">
+				<p>
+					Learn more about the course by visiting <a
+						href="http://bit.ly/polito-ami">http://bit.ly/polito-ami</a>.
+				</p>
+				<p>
+					Video lectures are freely available on a dedicated <a
+						href="http://www.youtube.com/playlist?list=PLqRTLlwsxDL-ikzLwzQIS_R2YojZMvmJW">Youtube
+						playlist</a> and on the teaching portal of the Politecnico di Torino.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<hr />
+				<a id="completed-projects"></a>
+			</div>
+		</div>
+		{% assign projects = site.categories.completed-projects | sort: 'date'
+		%} {% for post in projects %} {% assign odd = forloop.index0 |
+		modulo:2 %} {%if odd == 0 %}
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">
+					{{ post.title }} <span class="text-muted">({{post.team}})</span>
+				</h2>
+				<p class="lead">
+					{{ post.content}} <a href="{{post.project_url}}"
+						class="btn btn-default">Read more...</a>
+				</p>
+			</div>
+			<div class="col-md-5">
+				<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+			</div>
+		</div>
+		{% else %}
+		<div class="row featurette">
+			<div class="col-md-5">
+				<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading">
+					{{ post.title }} <span class="text-muted">({{post.team}})</span>
+				</h2>
+				<p class="lead">
+					{{ post.content}} <a href="{{post.project_url}}"
+						class="btn btn-default">Read more...</a>
+				</p>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+		<div class="row">
+			<div class="col-md-12">
+				<a id="ongoing-projects"></a>
+				<div class="page-header">
+					<h1>Ongoing projects</h1>
+				</div>
+			</div>
+		</div>
+		{% assign projects = site.categories.projects | sort: 'title' %} {%
+		for post in projects %} {% assign odd = forloop.index0 | modulo:2 %}
+		{%if odd == 0 %}
+		<div class="row featurette">
+			<div class="col-md-7">
+				<h2 class="featurette-heading">
+					{{ post.title }} <span class="text-muted">({{post.team}})</span>
+				</h2>
+				<p class="lead">
+					{{ post.content}} <a href="{{post.project_url}}"
+						class="btn btn-default">Read more...</a>
+				</p>
+			</div>
+			<div class="col-md-5">
+				<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+			</div>
+		</div>
+		{% else %}
+		<div class="row featurette">
+			<div class="col-md-5">
+				<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+			</div>
+			<div class="col-md-7">
+				<h2 class="featurette-heading">
+					{{ post.title }} <span class="text-muted">({{post.team}})</span>
+				</h2>
+				<p class="lead">
+					{{ post.content}} <a href="{{post.project_url}}"
+						class="btn btn-default">Read more...</a>
+				</p>
+			</div>
+		</div>
+		{% endif %} {% endfor %}
+	</div>
+</div>

@@ -1,0 +1,7 @@
+name: AmI-2014
+markdown: redcarpet
+redcarpet:
+  extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
+pygments: true
+url: http://ami-2014.github.io
+permalink: /:categories/:year/:title.html
