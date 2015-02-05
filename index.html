@@ -1,6 +1,6 @@
---- 
-layout: frontmatter 
-title: Ambient Intelligence 2015 
+---
+layout: frontmatter
+title: Ambient Intelligence 2015
 active: Home
 ---
 <div class="container">
@@ -69,15 +69,17 @@ active: Home
 				</p>
 			</div>
 		</div>
+<!-- 		
 		<div class="row">
 			<div class="col-md-12">
 				<hr />
 				<a id="completed-projects"></a>
 			</div>
 		</div>
-		{% assign projects = site.categories.completed-projects | sort: 'date'
-		%} {% for post in projects %} {% assign odd = forloop.index0 |
-		modulo:2 %} {%if odd == 0 %}
+		{% assign projects = site.categories.completed-projects | sort: 'date'%} 
+		{% for post in projects %} 
+		{% assign odd = forloop.index0 | modulo:2 %} 
+		{%if odd == 0 %}
 		<div class="row featurette">
 			<div class="col-md-7">
 				<h2 class="featurette-heading">
@@ -107,7 +109,8 @@ active: Home
 				</p>
 			</div>
 		</div>
-		{% endif %} {% endfor %}
+		{% endif %} 
+		{% endfor %}
 		<div class="row">
 			<div class="col-md-12">
 				<a id="ongoing-projects"></a>
@@ -116,8 +119,7 @@ active: Home
 				</div>
 			</div>
 		</div>
-		{% assign projects = site.categories.projects | sort: 'title' %} {%
-		for post in projects %} {% assign odd = forloop.index0 | modulo:2 %}
+		{% assign projects = site.categories.projects | sort: 'title' %} {%for post in projects %} {% assign odd = forloop.index0 | modulo:2 %}
 		{%if odd == 0 %}
 		<div class="row featurette">
 			<div class="col-md-7">
@@ -149,5 +151,7 @@ active: Home
 			</div>
 		</div>
 		{% endif %} {% endfor %}
+
 	</div>
+-->
 </div>

@@ -28,6 +28,11 @@ body {
 	text-align: justify;
 }
 
+.marketing ul, .marketing ul li
+{
+	text-align: justify;
+}
+
 .marketing h2 {
   font-weight: normal;
 }
