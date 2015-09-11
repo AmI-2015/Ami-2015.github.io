@@ -2,8 +2,8 @@
 layout: post
 title: "Study Room Manager"
 acronym: JJZ
-date: 2015-05-04 12:23:22
-categories: projects
+date: 2015-09-11 12:23:22
+categories: other-projects
 image: assets/img/project-snapshots/study-room-manager.jpg
 project_url: http://ami-2015.github.io/JJZ
 ---

@@ -1,7 +1,7 @@
-name: Ambient Intelligence - Technologies and Design (2015)
+name: "Ambient Intelligence: Technologies and Design (2015)"
 markdown: redcarpet
 redcarpet:
   extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
 pygments: true
-url: http://ami-2014.github.io
+url: http://ami-2015.github.io
 permalink: /:categories/:year/:title.html

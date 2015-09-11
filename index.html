@@ -64,15 +64,15 @@ active: Home
 				</p>
 				<p>
 					Video lectures are freely available on a dedicated <a
-						href="https://www.youtube.com/playlist?list=PLqRTLlwsxDL8I8H0RDLbyiw1lRXQcmwZ8">Youtube
-						playlist</a> and on the teaching portal of the Politecnico di Torino.
+						href="https://www.youtube.com/playlist?list=PLqRTLlwsxDL8I8H0RDLbyiw1lRXQcmwZ8">YouTube playlist</a> and on the teaching portal of the Politecnico di Torino.
 				</p>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<hr />
+				<hr/>
+			<a id="showcased-projects"></a>
 			</div>
 		</div>
 		{% assign projects = site.categories.projects | sort: 'title' %} {%for post in projects %} {% assign odd = forloop.index0 | modulo:2 %}
@@ -107,6 +107,49 @@ active: Home
 			</div>
 		</div>
 		{% endif %} {% endfor %}
+
+		<div class="row">
+			<div class="col-md-12">
+				<a id="other-projects"></a>
+				<div class="page-header">
+					<h1>Other projects</h1>
+				</div>
+			</div>
+		</div>
+			{% assign projects = site.categories.other-projects | sort: 'title' %}
+			{% for post in projects %} {% assign odd = forloop.index0 | modulo:2 %}
+
+			{%if odd == 0 %}
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">
+						{{ post.title }} {%if post.acronym %} <span class="text-muted">({{post.acronym}})</span> {% endif %}
+					</h2>
+					<p class="lead">
+						{{ post.content}} <a href="{{post.project_url}}"
+							class="btn btn-default">Read more...</a>
+					</p>
+				</div>
+				<div class="col-md-5">
+					<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+				</div>
+			</div>
+			{% else %}
+			<div class="row featurette">
+				<div class="col-md-5">
+					<a href="{{post.project_url}}"><img src="{{post.image}}" /></a>
+				</div>
+				<div class="col-md-7">
+					<h2 class="featurette-heading">
+						{{ post.title }} {%if post.acronym %} <span class="text-muted">({{post.acronym}})</span> {% endif %}
+					</h2>
+					<p class="lead">
+						{{ post.content}} <a href="{{post.project_url}}"
+							class="btn btn-default">Read more...</a>
+					</p>
+				</div>
+			</div>
+			{% endif %} {% endfor %}
 
 	</div>
 </div>

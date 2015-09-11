@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "PoliRoute"
-date: 2015-05-04 12:12:22
-categories: projects
+date: 2015-09-11 12:12:22
+categories: other-projects
 image: assets/img/project-snapshots/poliroute.jpg
 project_url: http://ami-2015.github.io/e-MACS
 ---
